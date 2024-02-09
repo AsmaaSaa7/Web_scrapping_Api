@@ -31,7 +31,7 @@ Ce projet est une application de web scraping et d'API OpenWeather développée 
    - Exécutez `docker run -p 5000:5000 openweather_api` pour lancer l'API OpenWeather.
 
 ## Captures d'écran
-
+![image](https://github.com/AsmaaSaa7/Web_scrapping_Api/assets/118186795/b0578925-2438-4786-8afd-487aed9e1a38)
 ### Web Scraping
 
 ![image](https://github.com/AsmaaSaa7/Web_scrapping_Api/assets/118186795/06d3d702-a64f-4b58-a4e4-cf26e4240131)
