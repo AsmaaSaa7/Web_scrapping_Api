@@ -16,19 +16,33 @@ Ce projet est une application de web scraping et d'API OpenWeather développée 
   - `requirements.txt`: Fichier des dépendances Python.
   - `Dockerfile`: Configuration pour Docker.
 
-- `docker-compose.yml`: Fichier de configuration Docker Compose pour lancer les deux services (web scraping et API) simultanément.
+- `docker-compose.yml`: Fichier de configuration Docker Compose pour lancer les 3 services (web scraping et CASSANDRA et API) simultanément.
 
-## Utilisation
+# Utilisation
 
 1. **Web Scraping (crawler)**:
    - Assurez-vous que Docker est installé sur votre système.
-   - Exécutez `docker build -t web_scraper crawler/` pour construire l'image Docker.
-   - Exécutez `docker run -v $(pwd)/crawler:/app -it web_scraper` pour lancer le scraping des données météorologiques.
+   - Exécutez `docker-compose up` pour construire l'image Docker et lancer le scraping des données météorologiques.
+   - Le fichier `docker-compose.yml` contient la configuration Docker Compose pour lancer les 3 services (web scraping, Cassandra et API) simultanément.
 
-2. **API OpenWeather**:
-   - Assurez-vous que Docker est installé sur votre système.
-   - Exécutez `docker build -t openweather_api Api/` pour construire l'image Docker.
-   - Exécutez `docker run -p 5000:5000 openweather_api` pour lancer l'API OpenWeather.
+2. **Cassandra**:
+   - L'instance de Cassandra sera également lancée en utilisant Docker Compose lors de l'exécution de `docker-compose up`. Aucune action supplémentaire n'est requise pour la configuration.
+
+3. **API OpenWeather**:
+   - Une fois que les services Docker sont en cours d'exécution, l'API OpenWeather sera accessible.
+   - Assurez-vous que l'adresse et le port de l'API sont corrects selon la configuration dans le fichier `main.py`.
+     
+
+## Exemple d'utilisation avec Docker Compose
+
+1. Assurez-vous que Docker est installé sur votre système.
+2. Naviguez jusqu'au répertoire contenant le fichier `docker-compose.yml`.
+3. Exécutez la commande suivante dans votre terminal : docker-compose up
+4. Attendez que les services se construisent et se lancent. Une fois terminé, vous devriez voir des messages indiquant que les services sont prêts à être utilisés.
+5. Vous pouvez maintenant accéder à l'API OpenWeather via l'adresse spécifiée http://localhost:8080/weather?country=FR` et commencer à récupérer les données météorologiques.
+
+
+
 
 ## Captures d'écran
 
