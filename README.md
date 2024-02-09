@@ -1,4 +1,4 @@
-![image](https://github.com/AsmaaSaa7/Web_scrapping_Api/assets/118186795/b0578925-2438-4786-8afd-487aed9e1a38)# Projet de Web Scraping & API OpenWeather
+# Projet de Web Scraping & API OpenWeather
 
 Ce projet est une application de web scraping et d'API OpenWeather développée avec VS Code réalisé par Mohamed REDA TARAOUI , Illana TARTOUR, Asmaa SAADAOUI. Il est conçu pour récupérer des données météorologiques à partir du site web et fournir une API pour accéder à ces données.
 
